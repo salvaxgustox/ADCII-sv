@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ADCII_sv": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7075",
+      "launchBrowser": false
+    }
+  }
+}

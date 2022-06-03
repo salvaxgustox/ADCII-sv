@@ -1,15 +1,7 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "WEBSITE_SLOT_NAME": "Production",
-    "FUNCTIONS_EXTENSION_VERSION": "~4",
-    "ScmType": "GitHub",
-    "WEBSITE_AUTH_ENABLED": "False",
-    "APPINSIGHTS_INSTRUMENTATIONKEY": "14c49165-9aa1-4c80-9b37-233505ed031b",
-    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=adciisv;AccountKey=W/kPb8EK+jxE3P84pUjNuCE5x4vxQIVwRDsiuNkgbiVK1EWJSfwxEaCEghjS8/UeSH5j25jywJB5+AStPUgtKw==;EndpointSuffix=core.windows.net",
-    "WEBSITE_CONTENTSHARE": "adcii-sv5104b6",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "WEBSITE_SITE_NAME": "ADCII-SV",
-    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=adciisv;AccountKey=W/kPb8EK+jxE3P84pUjNuCE5x4vxQIVwRDsiuNkgbiVK1EWJSfwxEaCEghjS8/UeSH5j25jywJB5+AStPUgtKw==;EndpointSuffix=core.windows.net"
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
   }
 }
