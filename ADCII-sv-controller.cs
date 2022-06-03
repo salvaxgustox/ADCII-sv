@@ -13,7 +13,7 @@ namespace umg.salva
     {
         [FunctionName("ADCII_sv_controller")]
         public static IActionResult Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             string SqlConnectionString ="Server=tcp:umg.database.windows.net,1433;Initial Catalog=project;Persist Security Info=False;User ID=dbasalva;Password=Salva301190!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
