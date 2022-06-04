@@ -59,7 +59,7 @@ namespace umg.salva
                             log.LogInformation($"Successfully Executed Azure Function at: {DateTime.Now}");
                             Console.WriteLine($"Row count processed: "+ reader.GetBoolean(1).ToString());
                             log.LogInformation($"Row count processed: "+ reader.GetBoolean(1).ToString());
-                            result = $"{{b: {reader.GetBoolean(1)}, s: {reader.GetBoolean(2)}, l: {reader.GetBoolean(3)}, fecha: {reader.GetDateTime(4)} }}";
+                            result = $"{{\"b\": {reader.GetBoolean(1).ToString().ToLower()}, \"s\": {reader.GetBoolean(2).ToString().ToLower()}, \"l\": {reader.GetBoolean(3).ToString().ToLower()}, \"fecha\": \"{reader.GetDateTime(4)}\" }}";
                         }
                     }
             }
