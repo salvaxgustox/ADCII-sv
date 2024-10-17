@@ -16,7 +16,8 @@ namespace umg.salva
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            string SqlConnectionString ="Server=tcp:umg.database.windows.net,1433;Initial Catalog=project;Persist Security Info=False;User ID=dbasalva;Password=Salva301190!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            // string SqlConnectionString ="Server=tcp:umg.database.windows.net,1433;Initial Catalog=project;Persist Security Info=False;User ID=august;Password=Salva301190!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string SqlConnectionString = "Server=tcp:raid-test-sv.database.windows.net,1433;Initial Catalog=dbsalva;Persist Security Info=False;User ID=august;Password=Salva301190!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             SqlConnection conn = new SqlConnection(SqlConnectionString);
             conn.Open();
             string result = "...";
@@ -59,7 +60,9 @@ namespace umg.salva
                             log.LogInformation($"Successfully Executed Azure Function at: {DateTime.Now}");
                             Console.WriteLine($"Row count processed: "+ reader.GetBoolean(1).ToString());
                             log.LogInformation($"Row count processed: "+ reader.GetBoolean(1).ToString());
-                            result = $"{{\"b\": {reader.GetBoolean(1).ToString().ToLower()}, \"s\": {reader.GetBoolean(2).ToString().ToLower()}, \"l\": {reader.GetBoolean(3).ToString().ToLower()}, \"fecha\": \"{reader.GetDateTime(4)}\" }}";
+                            Console.WriteLine($"Row count processed: "+ reader.GetBoolean(0).ToString());
+                            log.LogInformation($"Row count processed: "+ reader.GetBoolean(0).ToString());
+                            result = $"{{\"b\": {reader.GetBoolean(0).ToString().ToLower()}, \"s\": {reader.GetBoolean(1).ToString().ToLower()}, \"l\": {reader.GetBoolean(2).ToString().ToLower()}, \"fecha\": \"{reader.GetDateTime(3)}\" }}";
                         }
                     }
             }
